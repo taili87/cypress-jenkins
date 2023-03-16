@@ -3,6 +3,7 @@
 // loaded automatically before your test files.
 import 'cypress-file-upload';
 import './commands'
+import 'cypress-mochawesome-reporter/register';
 ///<reference types="Cypress/>"
 
 Cypress.on('uncaught:exception', (err, runnable) => {
