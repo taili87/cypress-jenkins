@@ -1,6 +1,4 @@
 
-# This the JENKINSFILE 
-
 pipeline{
     agent any 
     parameters{
