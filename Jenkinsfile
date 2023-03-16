@@ -1,4 +1,3 @@
-
 pipeline{
     agent any 
    
@@ -37,7 +36,7 @@ pipeline{
 
     post{
         always{
-            publishHTML([allowMissing:false, alwaysLinkToLastBuild:false, keepAll: true, reportDir: 'cypress/report/', reportFiles: 'index.html'])
+            publishHTML([allowMissing:false, alwaysLinkToLastBuild:false, keepAll: true, reportDir: 'cypress/report/html/', reportFiles: 'index.html'])
         }
     }
 }
