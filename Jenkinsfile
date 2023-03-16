@@ -14,10 +14,16 @@ pipeline{
             }
            
         }
+        stage ('Pre-Build-Node'){
+            steps{
+                bat "npm install"
+                
+            }
+        }
 
         stage ('Testing'){
             steps{
-                bat "npm install"
+              
                 bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
             }
         }
