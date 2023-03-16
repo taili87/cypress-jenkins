@@ -14,10 +14,16 @@ pipeline{
             }
            
         }
+        stage ('Pre-Build-Node'){
+            steps{
+                bat "npm install"
+                
+            }
+        }
 
         stage ('Testing'){
             steps{
-                bat "npm install"
+              
                 bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
             }
         }
@@ -31,7 +37,7 @@ pipeline{
 
     post{
         always{
-            publishHTML([allowMissing:false, alwaysLinkToLastBuild:false, keelAll: true, reportDir: 'cypress/report/html', reportFiles: 'index.html'])
+            publishHTML([allowMissing:false, alwaysLinkToLastBuild:false, keelAll: true, reportDir: 'cypress/report/', reportFiles: 'index.html'])
         }
     }
 }
