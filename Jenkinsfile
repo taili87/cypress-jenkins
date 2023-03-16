@@ -1,6 +1,9 @@
 
 pipeline{
     agent any 
+    options {
+        ansiColor('xterm')
+    }
     parameters{
         string (name: 'SPEC', defaultValue: "cypress/e2e/**/**", description:"Enter the scripts path you want to execute")
         choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description:"Choice of browser you want to use to execute the scripts")
@@ -16,8 +19,8 @@ pipeline{
 
         stage ('Testing'){
             steps{
-                bat "npm i"
-                bat "npm run cypress:run --browser ${BROWSER} --spec ${SPEC}"
+                bat "npm install"
+                bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
             }
         }
 
