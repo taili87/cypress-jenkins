@@ -8,6 +8,7 @@
 # Modify the branch
 # C:\Users\ablay\OneDrive\Bureau\demo\cypress-typescript\cypress\reports\html\index.html
 # How to fix Jenkins console log Encoding issue on window??
+# Execute Jenkins {Minites} {Hour} {DayOfMonth} {Month} {DayOfWeek}
 # JenkinsFile
 
 
