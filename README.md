@@ -6,7 +6,8 @@
 # git remote add origin https://github.com/taili87/cypress-jenkins.git
 # git push -u origin master
 # Modify the branch
-
+# C:\Users\ablay\OneDrive\Bureau\demo\cypress-typescript\cypress\reports\html\index.html
+# How to fix Jenkins console log Encoding issue on window??
 # JenkinsFile
 
 
